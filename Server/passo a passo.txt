@@ -1,2 +1,0 @@
-abrir o powerShell como adm e liberer as permissões:
-
