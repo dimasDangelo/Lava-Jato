@@ -5,7 +5,7 @@ import useAlerta from "./hooks/UseAlerta";
 import Modal from "./utils/Modal";
 
 const Servico = () => {
-    const { data, error, fetchData } = useFetch();
+    const { fetchData } = useFetch();
     const { exibirAlerta } = useAlerta(2000);
     const [servicos, setServicos] = useState([]);
     const [novoServico, setNovoServico] = useState({ nome: "", valor: "" });
@@ -46,7 +46,6 @@ const Servico = () => {
     }
     
     const addServico = async () => {
-        console.log("123");
         const dados = await fetchData(`/servicos/add/${novoServico.nome}/${novoServico.valor}`);   
         
         if (dados){
